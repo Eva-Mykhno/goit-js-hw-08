@@ -1,0 +1,17 @@
+const form = document.querySelector('.login-form');
+console.log(form);
+form.addEventListener('submit', event => {
+  event.preventDefault();
+  const email = form.elements.email.value.trim();
+  const password = form.elements.password.value.trim();
+  if (email === '' || password === '') {
+    alert('All form fields must be filled in');
+  } else {
+    const infoForm = {
+      email,
+      password,
+    };
+    console.log(infoForm);
+    form.reset();
+  }
+});
